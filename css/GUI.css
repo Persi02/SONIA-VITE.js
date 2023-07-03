@@ -7,12 +7,20 @@
 body {
     font-size: 100%;
     font-family: sans-serif;
+    background-color: #ffffff;
 }
 
-/* debut GUI */
-.container {
-    padding: 0 32px;
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px;
 }
+
+
+
+/* DEBUT TYPOGRAPHIE */
+
 
 .h1,
 .title-hero {
@@ -70,18 +78,33 @@ a {
     text-decoration: none;
 }
 
+/* FIN TYPOGRAPHIE*/
 
-.img-card {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+
+
+.container {
+    padding: 0 32px;
 }
 
 .d-flex {
     display: flex;
 }
 
-/* card */
+/* CARD */
+.grid-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+/* CARD PRODUCT */
+.img-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .card figure {
     position: relative;
@@ -97,6 +120,7 @@ a {
     border-radius: 50%;
     padding: 13px;
     cursor: pointer;
+
 }
 
 .like:hover {
@@ -116,10 +140,11 @@ a {
     color: #5F5F5F;
 }
 
-/* fin card */
-/* card story */
+/* FIN CARD-PRODUCTS */
+/* CARD STORY */
 .card-1 {
     position: relative;
+
 }
 
 .card-story-body {
@@ -144,8 +169,9 @@ a {
     margin: 3px 0 16px;
 }
 
-/* fin card story */
-/* btn */
+/* FIN CARD STORY */
+/* FIN CARD */
+/* DEBUT BTN */
 .card-btn {
     padding: 3px;
     overflow: hidden;
@@ -174,7 +200,7 @@ a {
     height: 100%;
     position: absolute;
     left: 50%;
-    background: linear-gradient(to top, rgb(0, 255, 200), rgb(255, 255, 255));
+    background: linear-gradient(to top, rgb(0, 255, 200), transparent);
     z-index: -1;
     transform-origin: left;
     animation: animate 3s linear infinite;
@@ -235,15 +261,16 @@ a {
     outline: none;
 }
 
-/* fin btn */
-/* fin GUI */
-/* debut header */
 
+/* FIN BTN */
+
+
+/* DEBUT HEADER */
 .header {
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+    background-color: red;
+
 }
 
 .card-top {
@@ -324,319 +351,8 @@ a {
     color: #FFF;
 }
 
-
-/* fin header */
-/* debut section hero */
-.hero {
-    width: 100%;
-    height: 100vh;
-    background-image: url('../image/desing/Image\ top.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    padding: 32px 0px;
-}
-
-.hero-container {
-    width: 100%;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-
-
-.card-title {
-    color: #FFF;
-}
-
-/* fin section hero */
-.story-0 {
-    padding-top: 70px;
-}
-
-/* debut section product */
-.product {
-    padding: 80px 0px;
-}
-
-.flex-product {
-    align-items: center;
-    justify-content: space-between;
-}
-
-.icon svg path {
-    fill: #000;
-}
-
-.big-card-product {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1302px;
-    margin: 27px auto 0;
-    gap: 12px;
-}
-
-
-
-.btn-products {
-    display: flex;
-    justify-content: center;
-    grid-column: span 3;
-}
-
-/* fin section product */
-/* debut section story */
-.story {
-    width: 100%;
-    padding: 214px 0;
-    background-color: #000;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.card-story {
-    max-width: 1000px;
-}
-
-.big-card-story ul {
-    margin-left: 16px;
-}
-
-.big-card-story>* {
-    margin-bottom: 10px;
-
-}
-
-.big-card-story .p-opac {
-    opacity: 0.5;
-}
-
-
-
-.story-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    padding-top: 60px;
-}
-
-/* fin story */
-/* debut journey */
-.journey {
-    padding: 70px 0;
-}
-
-.journey h2 {
-    margin-bottom: 4px;
-}
-
-.journey>p {
-    margin-bottom: 24px;
-}
-
-.big-card-journey {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1302px;
-    margin: 27px auto 0;
-    gap: 12px;
-}
-
-.btn-journey {
-    display: flex;
-    justify-content: center;
-    grid-column: span 4;
-}
-
-/* fin journey */
-/* debut journey-2 */
-.journey-2 {
-    padding: 0 0 80px;
-
-}
-
-.journey-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 12px;
-}
-
-.btn-journey2 {
-    grid-column: span 12;
-    justify-content: center;
-}
-
-.col-3 {
-    grid-column: span 3;
-
-}
-
-.col-3-3 {
-    grid-column: 3 /span 3;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.col-7 {
-    grid-column: span 7;
-}
-
-.btn_col12 {
-    width: 25%;
-    margin: 73px auto 0;
-    grid-column: span 12;
-
-}
-
-/* fin journey-2 */
-/* debut categorie */
-.categorie {
-    position: relative;
-    background-color: #000;
-    width: 100%;
-
-}
-
-.categorie-container {
-    width: 100%;
-    padding: 136px 102px 85px;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.card-flotte {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 1000px;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    padding: 50px 32px;
-    gap: 12px;
-}
-
-[class*="img-card"] {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-}
-
-.img-hover-1:hover {
-    background-image: url('../image/desing/Image\ \(1\).png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.grand-p {
-    font-size: 104px;
-    font-family: 'roboto';
-    letter-spacing: -3.12px;
-    text-transform: uppercase;
-    color: white;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.new {
-    position: relative;
-    justify-content: flex-end;
-    margin-right: 225px;
-    z-index: 100;
-}
-
-.ready {
-    margin-left: 141px;
-}
-
-.chaussures {
-    margin-left: 5px;
-}
-
-.acces {
-    justify-content: flex-end;
-}
-
-.sacs {
-    justify-content: center;
-}
-
-.sacss {
-    transform: translateX(-50%);
-}
-
-/* fin category */
-/* debut story-3 */
-.story-3 {
-    padding: 50px 0;
-
-}
-
-.story-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 12px;
-}
-
-.col-4 {
-    grid-column: span 4;
-    position: relative;
-}
-
-.card-b {
-    left: 0;
-    bottom: 0;
-}
-
-/* fin story-3 */
-/* debut manistro */
-.manistro {
-    padding: 85px 32px 65px;
-    background-color: #B22B2D;
-    width: 100%;
-}
-
-.card-manistro {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto 1fr;
-    gap: 12px;
-    padding-top: 27px;
-}
-
-.col-2 {
-    grid-column: span 2;
-}
-
-.col-4-8 {
-
-    grid-column: 8/span 4;
-    grid-row: 2 /span 1;
-    color: #FFF;
-
-}
-
-.col-4-8 ul {
-    margin: 24px 0 19px 16px;
-}
-
-.col-4-8 p {
-    line-height: 24px;
-    font-size: 14px;
-}
-
-.signature {
-    width: 118px;
-    height: 68px;
-}
-
-/* fin manistro */
-/* debut footer */
+/* FIN HEADER */
+/* FOOTER */
 footer {
     width: 100%;
     background-color: #000;
@@ -750,3 +466,5 @@ footer hr {
 .card-foot--2 a:hover {
     color: rgb(14, 107, 184);
 }
+
+/* FIN FOOTER */
